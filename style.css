@@ -60,10 +60,10 @@ nav .fa{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+
 }
 .text-box h1{
-    font-size: 62px;
+    font-size: 32px;
 }
 .text-box p{
     margin: 20px 0 40px;
@@ -521,13 +521,6 @@ h3{
     text-decoration: none;
     color: #777;
 }
-
-
-
-
-
-
-
 
 
 
