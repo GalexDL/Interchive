@@ -526,7 +526,17 @@ h3{
     text-decoration: none;
     color: #777;
 }
+.container {
+ margin: 150px auto;
+ width: 50%;
+ padding: 8px;
+}
 
+.mimg 
+{
+  float: right;
+
+}
 
 
 
