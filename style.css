@@ -139,6 +139,7 @@ nav .fa{
     background-image: linear-gradient(rgba(38,87,187,0.0),rgba(173,104, 237,0.0));
     background-position: center;
     background-size: cover;
+    display: flex;
     position: relative;
     z-index: 1;
 }
@@ -150,10 +151,16 @@ nav .fa{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(images/back2.png);
+  background-image: url(back2.png);
   opacity: 0.3; /* Change the opacity value as needed */
   background-size:cover;
   z-index: -1;
+}
+.mimg 
+{
+  float: right;
+  margin-left:20px;
+
 }
 h1{
     font-size: 36px;
@@ -551,13 +558,6 @@ h3{
  width: 50%;
  padding: 8px;
 }
-
-.mimg 
-{
-  float: right;
-
-}
-
 
 
 
