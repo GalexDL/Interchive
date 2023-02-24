@@ -140,6 +140,9 @@ nav .fa{
     background-position: center;
     background-size: cover;
     display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
     position: relative;
     z-index: 1;
 }
