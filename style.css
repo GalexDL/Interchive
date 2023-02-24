@@ -141,7 +141,6 @@ nav .fa{
     background-size: cover;
     display: flex;
     flex-direction:row;
-    justify-content:flex-end;
     position: relative;
     z-index: 1;
 }
