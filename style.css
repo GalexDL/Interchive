@@ -136,7 +136,7 @@ nav .fa{
     padding-top: 100px;
 }
 .info{
-    background-image: linear-gradient(rgba(38,87,187,0.1),rgba(173,104, 237,0.1));
+    background-image: linear-gradient(rgba(38,87,187,0.0),rgba(173,104, 237,0.0));
     background-position: center;
     background-size: cover;
     position: relative;
