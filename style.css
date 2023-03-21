@@ -902,15 +902,17 @@
 }
 
 
-
-
-
-
  .img-infoo {
      width: 100%;
      padding: 0px 30px 20px;
 }
 
       
-      
+.tab-contentt {
+      display: none;
+      padding: 10px;
+      background-color:#ffffff;
+    }
+.tab-contentt.active {
+  display: block;
 
