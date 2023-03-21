@@ -777,7 +777,7 @@
 
  .rheader{
      width: 100%;
-     background-image: linear-gradient(rgba(38,87,187,0.7),rgba(173,104, 237,0.3)),url(images/back2.png);
+     background-image: linear-gradient(rgba(38,87,187,0.7),rgba(173,104, 237,0.3)),url(back2.png);
      background-position: center;
      background-size: cover;
      position: relative;
@@ -787,30 +787,38 @@
 .tab-container {
       border: 1px solid #ccc;
       padding: 10px;
+
     }
     
 .tab-links {
       list-style: none;
       margin: 0;
       padding: 0;
+
     }
     
 .tab-links li {
       display: inline-block;
       margin-right: 10px;
+
     }
     
 .tab-links li a {
       display: block;
+      border-radius: 2px;
       padding: 5px;
       background-color: #eee;
       color: #333;
       text-decoration: none;
+
     }
     
 .tab-links li.active a {
       background-color: #fff;
       font-weight: bold;
+      /*border: 2.5px solid black;*/
+
+
     }
     
 .tab-content {
@@ -820,12 +828,25 @@
     }
     
 .tab-content.active {
-      display: block;
-    }
+  display: block;
+  
+}
+#blog1{
+  border-top: 2.5px solid #cacaca;
+  /*border-bottom: 2.5px solid #cacaca;*/
+}
+#blog2{
+  border-top: 2.5px solid #cacaca;
+}
+#blog3{
+  border-top: 2.5px solid #cacaca;
+}
 
+      
 .txtest{
   text-align: left;
 }
+
 .txtestwait{
   color: rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -842,6 +863,7 @@
 .dli{
   width:498;
   height:392;
+  pointer-events: none;
 }
 @media screen and (max-width:530px) {
   .dli{
@@ -857,6 +879,38 @@
   }
   
 }
+
+
+
+
+.dlii{
+  width:398.4;
+  height:313.6;
+  pointer-events: none;
+  position: absolute;
+  top: 10%;
+  left: 33%;
+}
+@media screen and (max-width:530px) {
+  .dlii{
+    width:373.5;
+    height:294;
+  }
+  
+}
+@media screen and (max-width:410px) {
+  .dlii{
+    width:268.453125;
+    height:211.3125;
+  }
+  
+}
+
+
+
+
+
+
  .img-infoo {
      width: 100%;
      padding: 0px 30px 20px;
