@@ -1,0 +1,88 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="iconic.png" type="image/png">
+  <link rel="shortcut icon" href="iconic.png" type="image/png">
+  <title>Interchive</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <script src="script.js" defer></script>
+</head>
+
+<header class="rheader">
+  <nav>
+    <a href="index.html"><img src="logo3.png"></a>
+    <div class="nav-links" id="navLinks">  
+      <i id="left" class="fa fa-close" onclick="hideMenu()"></i>
+      <ul>
+                    <li><a href="story.html">Stories</a></li>
+                    <li><a href="updates.html">Updates</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="download.html" class="download-button">Download</a></li>
+    </div>
+      <i id="right" class="fa fa-bars" onclick="showMenu()"></i>
+  </nav>
+  
+</header>
+
+<!---------- Interchive? ----------->
+    
+    <section>
+      <div class="infoo" class="wrapper" background-image:back.png; >
+        <article class="img-info">
+        <h1>Planned Updates</h1>
+        <p>- Chapter 1 completed by May / Along with a exe release</p>
+        <p>- Cloud Saves when renpy 8.2 releases</p>
+        <p>- Updated support of more portraits in April</p>
+        <p>- Balloon Animations finished in April?</p>
+        <p>- Finishing proper support for Open Dylexic Font</p>
+        <p>- Figuring out how to update and add stories without needing to redownload</p>
+
+        
+        
+        <h1>TBD Updates</h1>
+        <p>- Small Turn-Based Combat System</p>
+        <p>- Web Support with the release of renpy 8.2 releases</p>
+        <p>- Proper Controller Support (Different UI is needed)</p>
+        <p>- Adding Event Stories (Not interested in doing Event Stories anytime soon, unless someone would like to do some)</p>
+        <p>- Finding a way to improve the font</p>
+
+          
+        </article>
+      </div>
+    </section>
+    
+<!-------- footer ---------->
+
+<section class="footer">
+        <h2>About</h2>
+        <p> Interchive Discord is avalible if you need any help or have questions.<br>If you have any other questions/inquirys please contact me on twitter or discord!</p>
+        <div class="icons">
+            <a href="https://twitter.com/ItsGalex_"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a>
+            <a href="https://www.youtube.com/@ItsGalex"><i class="fab fa-youtube" style="color:red"></i></a>
+            <a href="https://discord.gg/feqQMnzQKj"><i class='fab fa-discord'></i></a>
+        </div>
+</section>     
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+<!--<script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script> -->
+<!-- <py-script>display("Hello World!")</py-script> -->
+</body>
+  
+  
+  
+  
+  
+  
