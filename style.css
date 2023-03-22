@@ -916,3 +916,52 @@
 .tab-contentt.active {
   display: block;
 
+.download-button1 {
+  display: inline-block;
+  background-color: #B247AA;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+    margin-top: 50px;
+  
+
+
+}
+
+.download-button1 i {
+  margin-right: 10px;
+
+}
+
+.download-button2 {
+  display: inline-block;
+  background-color: #0078D7;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 50px;
+
+}
+
+.download-button2 i {
+  margin-right: 10px;
+}
+
+.downloadmain-container {
+  display:flex;
+  justify-content:center;
+
+}
+
+
+     
+     
+     
