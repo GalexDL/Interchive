@@ -908,13 +908,17 @@
 }
 
       
-.tab-contentt {
+.tab-connt {
       display: none;
       padding: 10px;
       background-color:#ffffff;
     }
-.tab-contentt.active {
+  
+.tab-connt.active {
   display: block;
+  
+}
+
 
 .download-button1 {
   display: inline-block;
@@ -962,5 +966,5 @@
 }
 
 
-     
-     
+
+
