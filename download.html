@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="iconic.png" type="image/png">
+  <link rel="shortcut icon" href="iconic.png" type="image/png">
+  <title>Interchive</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <script src="script.js" defer></script>
+</head>
+
+<header class="rheader">
+  <nav>
+    <a href="index.html"><img src="logo3.png"></a>
+    <div class="nav-links" id="navLinks">  
+      <i id="left" class="fa fa-close" onclick="hideMenu()"></i>
+      <ul>
+                    <li><a href="story.html">Stories</a></li>
+                    <li><a href="update.html">Updates</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="download.html" class="download-button">Download</a></li>
+    </div>
+      <i id="right" class="fa fa-bars" onclick="showMenu()"></i>
+  </nav>
+  
+</header>
+<style>
+  h1 {
+  font-size: 50px;
+  background: -webkit-linear-gradient(#0078D7, #B247AA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align:center;
+}
+</style>
+
+<!---------- Interchive? ----------->
+
+<h1>Download</h1>
+<hr>
+
+<div class=downloadmain-container>
+  <a href="https://drive.google.com/uc?export=download&id=17F2SFXMcHzZuSX62aNa0eeuOrj9pUrHz" class="download-button1">
+    <i class='fab fa-linux' style="font-size:88px" ></i>
+    Download for Windows/Linux
+  </a>
+  <a href="https://drive.google.com/drive/folders/1aZzya2dB4rwHNW8CbnHwk199l03oMBA3?usp=share_link" class="download-button2">
+    <i class='fas fa-edit' style="font-size:88px" ></i>
+    Download Creator Version
+  </a>
+</div>
+
+
+<br>
+
+<br>
+<p style="text-align:center">Instructions are in the Resources Tab, further questions can be asked on discord!
+<a href="https://discord.gg/feqQMnzQKj"><i class='fab fa-discord'></i></a> </p>
+
+
+
+<!-------- footer ---------->
+
+    
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+
+</body>
+
+
+
