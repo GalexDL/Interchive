@@ -66,14 +66,66 @@
     </div>
     
     <div id="blog2" class="tab-content">
-      <h2>Creator/Tool Guide</h2>
+      <h1>Creator/Tool Guide</h1>
       <p>Not all images, sounds and etc are implemented fully and will be slowly added with updates. If you would like to help contribute there will be a section discussing how you can! </p>
-      <p>Not all images, sounds and etc are implemented fully and will be slowly added with updates. If you would like to help contribute there will be a section discussing how you can! </p>
-      <h2 class="txtestwait">Importing documentation soon...<br> Join the discord for info...</h2>
-    </div>
-    
-    <div id="blog3" class="tab-content">
-      <h2 class="txtestwait">Coming Soon...</h2>
+
+      <h2>Starting Out:</h2>
+          Open the renpy-8.0.3-sdk folder and open renpy.exe, I recommend pinning this on to your desktop or taskbar. This is the launcher for ren’py and there's a video if you want to customize 
+          it to how you like, if you wish to do so. 
+          Tutorial/Question are built into ren’py and you cant remove them and aren't created by me. By default Interchive should be selected anyways. 
+          Open Directory: Game opens your file explorer into the Interchive Files. Here lies all of the RPY files and Images. Don't click any py files, you will regret it.
+          Edit File: Open Project should ask you to select a default code editor. I highly recommend Atom, because in my opinion it visually looks the best, but you can choose 
+          at your discretion. After you select it you should see like 10 .rpy files. A few of them shouldn't matter to you for simplicity sake. 
+          This should wrap up the outline of the launcher and setting up renpy
+      
+      <h3>Files</h3>
+      <p style="text-align:center;">This is an explanation of what each .rpy file contains
+
+      <br><br>-Screens: Mainly contains menu design elements
+      <br>- Charactername: Contains character names
+      <br>- Gui: Usage isn't needed
+      <br>- Options: Usage isn't needed
+      <br>- Script: Usage isn't needed
+      <br>- Functions: Contains Animations and some other code functions
+      <br>- name: Contains the function for the Prince Name
+      <br>- Chapter1: Usage isn't needed
+      <br>- Test: Main file for testing your story quickly
+      <br>- Character: Contains all the information about Image Portraits and it's no where close to done because there are like 700 characters (help)
+      <br>- Debug: Usage isn't needed
+      <br>- Background: Contains background image data
+      <br>- Cutscene: Contains video based Cutscene data
+      </p>
+      
+      <h3>Lets Create:</h3>
+      <p>I’ll go in depth in other sections about documentation/meaning in other sections, but let's get right 
+          into it. Other sections will be important as well, this section is mainly to get the feel of it. Please 
+          do reinstall or undo the rpy files after, it'll make sense during the section. Also saves work differently in 
+          this developer mode since you are adding things, so don't try to make saves.</p>
+
+      If you haven't already have your code editor open, open it and go to test.rpy
+          We will be creating a test story here. I layed out some of the groundwork for a story without an intro.<br><br>
+          
+          Label is the name of the story, this name is used so a button can call a specific story. This is very important because
+          you do not want to potentially overlap other stories, I would avoid using anything too basic for universal usage purposes. <br><br>
+          
+          Return will always be at the end of a script, so it can take you back to the main menu. <br><br>
+          
+          Now we actually begin:
+          On line 9 it says <code>show prince</code>, this makes the Euden appear and you can make him disappear later in the script with <code>“hide prince”</code>.
+          You can change Euden’s facial expression with <code>show prince eye_4 mouth_4</code>. All sprites have various amounts of mouths/eyes and you can
+          refer to the DLPortrait Loader for reference. Also to note currently all portraits are not supported, this google sheet is my current reference for characters supported. <br><br>
+          
+          Before we move on, make sure in the main menu that you have selected the Euden icon and created a name. By default the name is set to “none” because there is no persistent to 
+          base the name off it yet.<br>  
+          Moving on to line 11 it says <code>prince “test”</code>. This makes the textbox appear with the players name and the text “test”. You can type almost anything within those quotation marks,
+          except for a few things thats used for customization which I will not be discussing in this section except for two of them. These two are <code>“\n”</code> and <code>“{nw}”</code>, currently the textbox barrier
+          isn't complete so \n is very useful to make words go to the next line. {nw} purpose is to make a line automatically continue, this is mainly for intros fading out. 
+          Each line should contain text for one scene, so dont write an essay…<br><br>
+          
+          We are going to look at charactername.rpy, this file contains the names of characters. This is very important because you absolutely can not put any random name.
+          You must define as stylized in this file <code>define “coding name” = Character("In game name", kind=character_base)</code>. 
+          For example if I am adding the name Alex I would put <code>define alex = Character("Alex", kind=character_base)</code>. Now in test.rpy I can put <code>alex “I am here”</code> <br> <br> 
+      <h2 class="txtestwait">Importing documentation soon...<br></h2>
     </div>
     
   </div>
