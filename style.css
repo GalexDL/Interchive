@@ -964,7 +964,19 @@
   justify-content:center;
 
 }
-
+code {
+  font-family: Consolas,"courier new";
+  color: #74ee15;
+  background-color: #000000;
+  padding: 2px;
+  font-size: 105%;
+}
+      
+      
+      
+      
+      
+      
 
 
 
