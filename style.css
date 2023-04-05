@@ -963,17 +963,7 @@
   display:flex;
   justify-content:center;
 
-}
-code {
-  font-family: Consolas,"courier new";
-  /*color: #74ee15;*/
-  /*background-color: #000000;*/
-  color: green;
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0, 0,0.1));
-  padding: 2px;
-  font-size: 105%;
-}
-      
+} 
       
 codee {
   font-family: Consolas,"courier new";
