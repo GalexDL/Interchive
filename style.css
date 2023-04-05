@@ -975,7 +975,13 @@ code {
 }
       
       
-      
+codee {
+  font-family: Consolas,"courier new";
+  color: green;
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0, 0,0.1));
+  padding: 2px;
+  font-size: 105%;
+}
       
       
       
