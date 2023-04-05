@@ -58,6 +58,17 @@ function hideMenu() {
 
 
 
+const copyButtons = document.querySelectorAll(".copy-button");
 
+copyButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const codeBlock = button.parentNode.querySelector("code");
+    navigator.clipboard.writeText(codeBlock.innerText);
+    button.innerText = "Copied!";
+    setTimeout(() => {
+      button.innerText = "Copy";
+    }, 2000);
+  });
+});
 
 
