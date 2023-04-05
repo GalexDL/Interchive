@@ -25,116 +25,429 @@
   </nav>
   
 </header>
-<body>
-  <div class="tab-container">
-    <ul class="tab-links">
-      <li class="active"><a href="#blog1">Setup Guide</a></li>
-      <li><a href="#blog2">Creation Guide</a></li>
-      <li><a href="#blog3">Cloud Saves</a></li>
-      <li><a href="#blog3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Animation&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 
-    </ul>
+ <style>
+  /* Main Styles */
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  /*background-image: linear-gradient(rgba(173,104, 237,0.1),rgba(38,87,187,0.1));*/
+  width: 9%;
+  position: fixed;
+  padding: 1em;
+  top:7.5em;
+  left:10;
+  height:60%;
+  overflow-y:auto;
+  border:3px solid;
+  background-image: linear-gradient(rgba(38,87,187,0.3),rgba(173,104, 237,0.2)),url(images/back2.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+
+  
+  
+  /*border-radius: 10px;*/
+
+
+}
+
+.sidebar nav {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5em;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  width: 80%;
+  padding: 1em;
+  margin-left:15%;
+}
+
+.content h1 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.content p {
+  margin-top: 0;
+}
+
+.code-block {
+    position: relative;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.code-block-header {
+    background-color: #ddd;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.code-block-content {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    color: #000;
+    padding: 5px;
+
+}
+
+.code-block-content pre {
+    margin-bottom: -55;
+    margin-top: -30;
     
-    <div id="blog1" class="tab-content active">
-      
-      <h2>How to install the Interchive</h2>
-      <p class="txtest">This is a instructional guide on how to install the interchive, install other stories and the tool version. Currently only for Windows, Linux. MacOS soon.</p>
-      <br>
-      <h3 class="txtest"> 1) Download the latest version </h3>
-      <br>
-      <h3 class="txtest"> 2) Extract interchive.exe   </h3>
-      <br>
-      <h3 class="txtest"> 3) Open and Enjoy </h3>
-      <br>
-      
-      <h2 class="txtestwait"> Story/Update installation</h2>
-      <br>
-      <h3 class="txtestwait"> 1) Instructions Soon... </h3>
-      <br>
-      
-      <h2> Creator installation</h2>
-      <br>
-      <h3 class="txtest"> 1) Download the latest version and a Code Editor  </h3>
-      <br>
-      <h3 class="txtest"> 2) Extract or open the Renpy folder  </h3>
-      <br>
-      <h3 class="txtest"> 3) Open the renpy 8.1.021 folder and open renpy.exe   </h3>
-      <br> <div class="dli"><img class="dli" src="images/dlibase.png" alt="launcher"></div>
-      <p class="txtestnj"> More details on the Creator Tool/Animation on the second tab or come join the discord for other questions! </p>
-      <br>
-      
-    </div>
+
+}
+
+.code-block-content code {
+    display: block;
     
-    <div id="blog2" class="tab-content">
-      <h1>Creator/Tool Guide</h1>
-      <p>Not all images, sounds and etc are implemented fully and will be slowly added with updates. If you would like to help contribute there will be a section discussing how you can! </p>
+}
 
-      <h2>Starting Out:</h2>
-          Open the renpy-8.0.3-sdk folder and open renpy.exe, I recommend pinning this on to your desktop or taskbar. This is the launcher for ren’py and there's a video if you want to customize 
-          it to how you like, if you wish to do so. 
-          Tutorial/Question are built into ren’py and you cant remove them and aren't created by me. By default Interchive should be selected anyways. 
-          Open Directory: Game opens your file explorer into the Interchive Files. Here lies all of the RPY files and Images. Don't click any py files, you will regret it.
-          Edit File: Open Project should ask you to select a default code editor. I highly recommend Atom, because in my opinion it visually looks the best, but you can choose 
-          at your discretion. After you select it you should see like 10 .rpy files. A few of them shouldn't matter to you for simplicity sake. 
-          This should wrap up the outline of the launcher and setting up renpy
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-color: #007f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+/* Footer Styles */
+
+
+</style>
+
+
+  <body>
+    <main>
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="#installation"><b>Installation</b></a></li>
+            <li><a href="#menuguide">Menu Guide</a></li>
+            <hr><br>
+            <li><a href="#gettingstarted"><b>Getting Started</b></a></li>
+            <li><a href="#structure">Structure</a></li>
+            <li><a href="#tut1">Tutorial #1</a></li>
+            <li><a href="#tut2">Tutorial #2</a></li>
+            <br><hr><br>
+            <li><a href="#definmen">Defintions</a></li>
+            <li><a href="#animen">Animations</a></li>            
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        
+<!-------- Installation ---------->
+
+      <section id="installation">
+        <h1>Normal Installation</h1>
+        <p class="txtest">This is a instructional guide on how to install the interchive, install other stories and the tool version. Currently only for Windows, Linux, MacOS.</p>
+        <h4 class="txtest"> 1) Download the latest version </h4>
+        <h4 class="txtest"> 2) Extract interchive.exe   </h4>
+        <h4 class="txtest"> 3) Open and Enjoy </h4>
+        <br>
+        <h2 class="txtestwait"> Story/Update installation</h2>
+        <br>
+        <h4 class="txtestwait"> 1) Instructions Soon... </h4>
+        <br>
+        
+        <h2> Creator installation</h2>
+        <br>
+        <h4 class="txtest"> 1) Download the latest version and a Code Editor  </h4>
+        <br>
+        <h4 class="txtest"> 2) Extract or open the Renpy folder  </h4>
+        <br>
+        <h4 class="txtest"> 3) Open the renpy renpy-8.0.3-sdk folder and open renpy.exe   </h4>
+        <br> <div class="dli"><img class="dli" src="images/dlibase.png" alt="launcher"></div>
+        <br><br>
+
+      </section>
       
-      <h3>Files</h3>
-      <p style="text-align:center;">This is an explanation of what each .rpy file contains
+ <!-------- Menu Guide ---------->
+     
+        <br>
+        <section id="menuguide">
+          <h2>Notte's guide for the Interchive</h2>
+          <p>This section is to explain each button and menus present in the Interchive!</p>
+          <p>First off we have the 3 main buttons on the main menu, Main Campign, Halidom Tales, and Event Stories. Main Campaign contains the main Dragalia story and Event Stories contains nothing at this moment. 
+          Halidom Tales contains castle stories, adventuerer/dragon stories, and creator stories  </p>
+          <p>On the top-left corner you can see a picture of Euden! This
+          is where you can type your name! This is important because by default the name is "none"  </p>
+          <p>On the top-right corner you can see a picture of gears. This is the options menu, you can change 
+          a various amount of things but its best to leave most things as is since it can mess up the viewing expirence</p>
+          <p>In the middle we have the load button, this button allows you to load a previous save point! This works differently in the creator version.
+          Also specifc to the creator version there is a test button that allows you to quickly test stories. </p>
+          <p>In the Halidom Tales Menu you can type or scroll to find a specifc story. </p>
 
-      <br><br>-Screens: Mainly contains menu design elements
-      <br>- Charactername: Contains character names
-      <br>- Gui: Usage isn't needed
-      <br>- Options: Usage isn't needed
-      <br>- Script: Usage isn't needed
-      <br>- Functions: Contains Animations and some other code functions
-      <br>- name: Contains the function for the Prince Name
-      <br>- Chapter1: Usage isn't needed
-      <br>- Test: Main file for testing your story quickly
-      <br>- Character: Contains all the information about Image Portraits and it's no where close to done because there are like 700 characters (help)
-      <br>- Debug: Usage isn't needed
-      <br>- Background: Contains background image data
-      <br>- Cutscene: Contains video based Cutscene data
-      </p>
-      
-      <h3>Lets Create:</h3>
-      <p>I’ll go in depth in other sections about documentation/meaning in other sections, but let's get right 
-          into it. Other sections will be important as well, this section is mainly to get the feel of it. Please 
-          do reinstall or undo the rpy files after, it'll make sense during the section. Also saves work differently in 
-          this developer mode since you are adding things, so don't try to make saves.</p>
-
-      If you haven't already have your code editor open, open it and go to test.rpy
-          We will be creating a test story here. I layed out some of the groundwork for a story without an intro.<br><br>
+        </section>
+        
+<br><hr><br><!-------- Getting Started ----------> 
+        
+        <section id="gettingstarted">
+          <h1>Getting Started</h1>
+          <p>No coding expirence is needed but this is still a learning process made easy!
+          Please dont be frighten to learn how to create, its easy I promise.</p>
           
+          <p>Open the renpy-8.0.3-sdk folder and open renpy.exe, I recommend pinning this on to your desktop or taskbar. 
+          <br>This is the launcher for ren’py and there's a video if you want to customize 
+          it to how you like, if you wish to do so.
+          Tutorial/Question are built into ren’py and you cant remove them and aren't created by me. By default Interchive
+          should be selected anyways.</p>
+          <li>Open Directory: 'Game' opens your file explorer into the Interchive Files. Here lies all of the RPY files and
+          Images. Don't click any py files, you will regret it. </li>
+          <br><li>Edit File: 'Open Project' should ask you to select a default code editor. I highly recommend Atom, because
+          in my opinion it visually looks the best, but you can choose 
+          at your discretion.</li>
+          <p>After you select it you should see the game folder or 10 .rpy files. Open the game folder if you cant see the rpy
+          files. A few of them will not matter to you for simplicity sake. 
+          This should wrap up the outline of the launcher and setting up renpy, the structure section goes into indepth detail
+          explaining the strcuture of files.</p>
+          
+          
+          
+          
+        </section>
+
+<!-------- Game Structure ---------->
+
+        <section id="structure">
+          <h1>Structure</h1>
+          <p>All of the game files are present under 'game', first thing you will see is a bunch of folders containing UI Images, 
+          Audio Files, Backgrounds, and Portraits. If you plan on adding your own images I suggest making a new folder! You will 
+          also see the rpy and py files. DO NOT CLICK THE PY FILES, itll be your biggest mistake.</p>
+          
+          <p>Going now into the structure of the RPY files, where you will be typing up your story and etc.</p>
+          <li> Charactername: Contains character names<br>
+          <li> Gui: Usage isn't important but contains some stuff relating to the UI<br>
+          <li> Options: Usage isn't needed but contains some overall function code<br>
+          <li> Script: Usage isn't needed<br>
+          <li> Functions: Contains animations and some other attributes<br>
+          <li> Name: Contains the function for the Prince Name<br>
+          <li> Chapter1: Usage isn't needed<br>
+          <li> Test: Main file for testing your story quickly<br>
+          <li> Character: Contains all the information about Image Portraits and it's no where close to done because there are like 700 characters and still needs manual testing to fix expressions (help)<br>
+          <li> Debug: Usage isn't needed<br>
+          <li> Background: Contains background image data<br>
+          <li> Cutscene: Contains video based cutscene data</li> <br> <hr> <br>
+          
+        </section>
+
+<!-------- Tutorial #1 ---------->
+
+        <section id="tut1">
+          <h1>Tutorial #1</h1>
+          <p>I’ll go in depth in other sections about documentation/meaning in other sections, but let's get right 
+          into it. Other sections will be important as well, this section is mainly to get the feel of it. Saves work differently in 
+          this developer mode since you are adding things, so don't try to make saves because it'll be inaccurate. Before we begin
+          please launch the game and input your name if you havent.</p>
+          
+          <p>Open 'test.rpy' we will be creating the story here, I already layed out some basic groundwork.<br>
           Label is the name of the story, this name is used so a button can call a specific story. This is very important because
-          you do not want to potentially overlap other stories, I would avoid using anything too basic for universal usage purposes. <br><br>
+          you do not want to potentially overlap other stories, I would avoid using anything too basic for universal usage purposes.
+          Return will always be at the end of a script, so it can take you back to the main menu. <br><br></p>
+            <div class="code-block">
+                <div class="code-block-header">test.rpy</div>
+                <div class="code-block-content">
+                    <pre>
+                        <code>
+label test:
+
+    #Key starting Values!
+    stop music
+    scene bgcastle1
+    show black
+    with fade
+    ################
+    show prince
+
+    prince "test"
+    show textboxlog
+
+    return
+                        </code>
+                    </pre>
+                    <button class="copy-button">Copy</button>
+                </div>
+            </div>          
+          <p>On line 9 it says <codee>show prince</codee>, this makes the Euden appear and you can make him disappear later in the script with <code>“hide prince”</code>.
+          You can change Euden’s facial expression with <codee>show prince eye_4 mouth_4</codee>. All sprites have various amounts of mouths/eyes and you can
+          refer to the <a href=https://dlportraits.space/>DLPortrait Viewer</a> for reference. Also to note currently all portraits are not supported, and facial emotion placement may be incorrect.
+          This <a href="https://docs.google.com/spreadsheets/d/1_AizqbVVaM09vymiY4xUGd8nSpcHbO8KFO0DO-j3GFg/edit?usp=sharing">google sheet </a> 
+          is my current reference for characters implemented. <br></p>
           
-          Return will always be at the end of a script, so it can take you back to the main menu. <br><br>
-          
-          Now we actually begin:
-          On line 9 it says <code>show prince</code>, this makes the Euden appear and you can make him disappear later in the script with <code>“hide prince”</code>.
-          You can change Euden’s facial expression with <code>show prince eye_4 mouth_4</code>. All sprites have various amounts of mouths/eyes and you can
-          refer to the <a href=https://dlportraits.space/>DLPortrait Viewer</a> for reference. Also to note currently all portraits are not supported, this <a href="https://docs.google.com/spreadsheets/d/1_AizqbVVaM09vymiY4xUGd8nSpcHbO8KFO0DO-j3GFg/edit?usp=sharing">google sheet</a> is my current reference for characters supported. <br><br>
-          
-          Before we move on, make sure in the main menu that you have selected the Euden icon and created a name. By default the name is set to “none” because there is no persistent to 
-          base the name off it yet.<br>  
-          Moving on to line 11 it says <code>prince “test”</code>. This makes the textbox appear with the players name and the text “test”. You can type almost anything within those quotation marks,
+          <p>Moving on to line 11, This line makes the textbox place the players name and the text “test”. You can type almost anything within those quotation marks,
           except for a few things thats used for customization which I will not be discussing in this section except for two of them. These two are <code>“\n”</code> and <code>“{nw}”</code>, currently the textbox barrier
-          isn't complete so \n is very useful to make words go to the next line. {nw} purpose is to make a line automatically continue, this is mainly for intros fading out. 
-          Each line should contain text for one scene, so dont write an essay…<br><br>
+          isn't complete so \n is very useful to make words go to the next line. {nw} purpose is to make a line automatically continue, this is mainly for intros fading out or a panic scene. 
+          Each line should contain text for one scene, so dont write an essay…<br><br></p>
           
-          We are going to look at charactername.rpy, this file contains the names of characters. This is very important because you absolutely can not put any random name.
-          You must define as stylized in this file <code>define “coding name” = Character("In game name", kind=character_base)</code>. 
-          For example if I am adding the name Alex I would put <code>define alex = Character("Alex", kind=character_base)</code>. Now in test.rpy I can put <code>alex “I am here”</code> <br> <br> 
-      <h2 class="txtestwait">Importing documentation soon...<br></h2>
-    </div>
+            <div class="code-block">
+                <div class="code-block-header">test.rpy</div>
+                <div class="code-block-content">
+                    <pre>
+                        <code>
+    show prince eye_4 mouth_4
+
+    prince "Testing \nTesting line 2"
     
-    <div id="blog3" class="tab-content">
-      <h2 class="txtestwait">Coming Soon...</h2>
-    </div>
+    show textboxlog
     
-  </div>
-</body>
-</html>
+    prince "Its funny this is called no wait{nw}"
+    prince "I waited"
+    
+    show textboxlog
+
+    return
+                        </code>
+                    </pre>
+                    <button class="copy-button">Copy</button>
+                </div>
+            </div>            
+            <br>
+            
+          <p>We are going to look at charactername.rpy, this file contains the names of characters. This is very important because you absolutely can not put any random name.
+          You must define as stylized in this file <codee>define “coding name” = Character("In game name", kind=character_base)</codee>. 
+          For example if I am adding the name Alex I would put <codee>define alex = Character("Alex", kind=character_base)</codee>. Now in test.rpy I can put <codee>alex “I am here”</codee> <br> <br>   </p> 
+          
+          
+            <div class="code-block">
+                <div class="code-block-header">charactername.rpy</div>
+                <div class="code-block-content">
+                    <pre>
+                        <code>
+define aurelius = Character("Aurelius", kind=character_base)
+define zethia = Character("Zethia", kind=character_base)
+define notte = Character("Notte", kind=character_base)
+define Mysterious = Character("???", kind=character_base)
+define skylaa = Character("Skyla", kind=character_base)
+
+<i>define (codename) = Character("Character Name", kind=character_base)</i>
+
+define alexx = Character("Alex", kind=character_base)
+                        </code>
+                    </pre>
+                    <button class="copy-button">Copy</button>
+                </div>
+            </div>            
+            <br>    
+          
+            <div class="code-block">
+                <div class="code-block-header">test.rpy</div>
+                <div class="code-block-content">
+                    <pre>
+                        <code>
+    alexx "Oh wait I dont look like alex..."
+                        </code>
+                    </pre>
+                    <button class="copy-button">Copy</button>
+                </div>
+            </div>            
+            <br>
+            
+            <p>Lastly for Tutorial #1 is action movements. So far there are 4 technical movements, Bounce, Moving Left/Right/Center and one transitionary action <codee>fadein</codee>. </p>
+            <p><li><codee>Bounce</codee> makes the sprite jump</li></p>
+            <p><li><codee>moveleft</codee> makes the sprite slide to the left</li></p>
+            <p><li><codee>moveright</codee> makes the sprite slide to the right</li></p>
+            <p><li><codee>movecenter</codee> makes the sprite slide to the center</li></p>
+            <p><li><codee>fadein</codee>is a transitionary action that makes a character appear and dissapear.</li></p>
+            <p><li><codee>movefadein</codee>is used when the charcter is already shown and using another action such as <codee>moveleft</codee></li></p>
+
+            <p>Examples of thier usage is below, As a reminder <codee> at fadein</codee> is not needed when hiding. To clearfy <codee>movefadein</codee> existence, its due to fadein counting showing again as hiding hopefully this is fixed eventually.  </p>
+            
+          
+            <div class="code-block">
+                <div class="code-block-header">test.rpy</div>
+                <div class="code-block-content">
+                    <pre>
+                        <code>
+    show skyla at moveright at fadein
+    skylaa "I can move around crazy, not that crazy but \nI can just imagine it"
+    show skyla at movecenter, movefadein
+    skylaa "All the information you need about the \nDragalia Interchive is in the here"     
+    hide skylaa
+    
+    return</code>
+    
+
+                    </pre>
+                    <button class="copy-button">Copy</button>
+                </div>
+            </div>            
+            <br>
+            
+            <p> This is the end of tutorial #1, essentially learning the basics of renpy/interchive. 
+            Next section will go more indepth into adding and designing! I just have to finish up some graphics before i start writing the next one.</p>
+        </section>
+        
+<!-------- Tutorial #2 ---------->
+
+        <section id="tut2">
+          <h1>Tutorial #2</h1>
+          <p class="txtestwait">Coming Soon...</p>
+        </section>
+
+<!-------- Defintions/Variables ---------->
+
+        <section id="definmen">
+          <h1>Defintions / Variables</h1>
+          <p class="txtestwait">Coming Soon...</p>
+        </section>
+        
+<!-------- Animations ---------->
+
+        <section id="animen">
+          <h1>Animations</h1>
+          <p class="txtestwait">Need more proof?</p>
+        </section>        
+      </div>       
+    </main>
+    
+    
+    
+    
+    
+    
+
+
+
+
+    
 <!-------- footer ---------->
 
 <section class="footer">
